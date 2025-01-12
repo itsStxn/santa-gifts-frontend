@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from './Loader';
 import React, { useEffect } from 'react';
 import { recommend } from '../funcrions/actions';
 import { useMutation } from '@tanstack/react-query';
@@ -23,7 +24,7 @@ const Reccomendations: React.FC<Props> = ({ sentence }) => {
 
 	return (
 		<div className='flex max-w-full overflow-x-auto no-scrollbar gap-2'>
-			{ isPending ? <div>Loading...</div> : 
+			{ isPending ? <Loader /> : 
 				data?.items.map((item, i) => 
 					<RecommendationCard item={item} key={item.name + i} /> ) }
 		</div>

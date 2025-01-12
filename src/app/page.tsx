@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 			<Canvas />
 			<main className="w-screen h-fit p-10 pt-[10rem] flex flex-col gap-[10rem] justify-center">
 				<h1 className="text-center place-self-center text-5xl font-thin">
-					Santa Gift Recommender
+					<span className="text-red-500">Santa</span>Gift Recommender
 				</h1>
 				<Display />
 			</main>

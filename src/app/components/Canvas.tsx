@@ -11,7 +11,6 @@ const Canvas: React.FC<Props> = ({ className }) => {
 	const gradientRef = useRef<NeatGradient | null>(null);
 
 	useEffect(() => {
-
 		if (!canvasRef.current)
 				return;
 
