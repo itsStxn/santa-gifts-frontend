@@ -81,10 +81,6 @@ npm run lint
 - **`/public`**: Public assets such as images and fonts.
 - **`/styles`**: Global and component-specific styles.
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for review.
-
 ## License
 
 This project is licensed under the MIT License.
