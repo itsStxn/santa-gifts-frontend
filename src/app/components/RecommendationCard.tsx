@@ -18,7 +18,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ item }) => {
 			href={item.link}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="group flex-shrink-0 block w-[20rem] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+			className="group flex-shrink-0 place-content-evenly block w-[20rem] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
 		>
 			{/* Product Image */}
 			<div className="relative w-full h-48 overflow-hidden">
@@ -66,7 +66,14 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ item }) => {
 			</div>
 
 			{/* Call to Action */}
-			<button className="mt-4 w-[60%] flex justify-center place-self-center  py-2 bg-red-500 text-white text-sm font-semibold rounded-md hover:bg-red-600 transition-colors">
+			<button 
+				className="mt-4 w-[60%] shadow-xl 
+				flex justify-center place-self-center  
+				py-2 bg-gradient-to-r 
+				from-amber-500 to-pink-500 text-white 
+				text-sm font-semibold 
+				rounded-md hover:opacity-80 transition-all"
+			>
 				View Product
 			</button>
 			</div>

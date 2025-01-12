@@ -23,7 +23,7 @@ const Reccomendations: React.FC<Props> = ({ sentence }) => {
 	}, [])
 
 	return (
-		<div className='flex max-w-full overflow-x-auto no-scrollbar gap-2'>
+		<div className={isPending ? 'size-fit' : 'flex max-w-full overflow-x-auto no-scrollbar gap-2'}>
 			{ isPending ? <Loader /> : 
 				data?.items.map((item, i) => 
 					<RecommendationCard item={item} key={item.name + i} /> ) }
