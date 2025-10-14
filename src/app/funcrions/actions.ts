@@ -1,5 +1,8 @@
 "use server";
 
+import dotenv from "dotenv";
+dotenv.config();
+
 export interface ProductItem {
 	name: string;
 	main_category: string;
@@ -29,12 +32,16 @@ interface SummarizerResponse {
 export const recommend: (sentence: string) => Promise<RecommenderResponse> = async (sentence) => {
 	try {
 		const url = "http://localhost:5291/API/Recommender";
+		const apiKey = process.env.MY_API_KEY || (() => {
+			throw new Error("API_KEY is not defined");
+		})();
+
 		const response = await fetch(url, {
 			body: `"${sentence}"`,
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				"MY-API-KEY": "cUC7ArQ!Pe&Xk6"
+				"MY-API-KEY": apiKey
 			}
 		});
 

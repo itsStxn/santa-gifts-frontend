@@ -92,7 +92,7 @@ const Display: React.FC<Props> = () => {
 			</button>
 
 			{/* Reccomendations */}
-			<div className="mt-20 max-w-full flex flex-col gap-4">
+			<div className="mt-20 max-w-full flex flex-col items-center gap-4">
 				{data && sentences.map((sentence, i) => 
 					<Reccomendations key={sentence + i} sentence={sentence} />)}
 			</div>
